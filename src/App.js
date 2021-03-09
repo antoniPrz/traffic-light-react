@@ -1,23 +1,29 @@
 import logo from './logo.svg';
 import './App.css';
+import React, {useState} from "react";
+
+
+
+
+
+
+
+
+
 
 function App() {
+
+
+const [lightON ,setColor] = useState ("red");
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    <div>
+     
+      <div className="container">
+  <div className="circle red" color="red" onClick={() => setColor("on") }> </div>
+  <div className="circle yellow" color="yelow"></div>
+  <div className="circle green" color="green"></div>
+</div>
     </div>
   );
 }
