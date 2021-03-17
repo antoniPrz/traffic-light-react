@@ -4,30 +4,6 @@ import React, {useState} from "react";
 
 
 
-
-
-
-
-
-
-
-// function App() {
-
-
-// const [lightON ,setColor] = useState ("red");
-//   return (
-
-//     <div>
-     
-//   <div className="container">
-//   <div className="circle red" color="red" onClick={() => setColor("on") }> </div>
-//   <div className="circle yellow" color="yelow"></div>
-//   <div className="circle " color="green"></div>
-// </div>
-//     </div>
-//   );
-// }
-
 class App extends React.Component{
 
   constructor(){
