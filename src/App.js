@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import React, {useState} from "react";
 
@@ -28,46 +28,43 @@ import React, {useState} from "react";
 //   );
 // }
 
-class Traffic extends React.Component{
+class App extends React.Component{
 
-state = {
-
-  on: false
+  constructor(){
+    super();
+    this.state = {
+        brilloOn: null
+    };
 }
-brillo = () => {
-  this.setState({on: !this.state.on})
 
-}
 render(){
-  if (this.state.on){
+
+  let redOn = '';
+  if (this.state.brilloOn == 'red') redOn = 'on';
+  let yellowOn = '';
+  if (this.state.brilloOn == 'yellow') yellowOn = 'on';
+  let greenOn = '';
+  if (this.state.brilloOn == 'green') greenOn = 'on';
+
+
+
+  
     return(
       <div>
      
       <div className="container">
-      <div className={"circle red  "} onClick={this.brillo }> </div>
-      <div className={"circle  yellow  "} onClick={this.brillo}> </div>
-      <div className={"circle green  "} onClick={this.brillo}> </div>
+      <div className={"circle red  " +redOn } onClick={() => this.setState({brilloOn : 'red'}) }> </div>
+      <div className={"circle  yellow " +yellowOn } onClick={() => this.setState({ brilloOn : 'yellow'}) }> </div>
+      <div className={"circle green  " + greenOn} onClick={() => this.setState({brilloOn : 'green'}) }> </div>
     </div>
         </div>
     )
-    }
-    else{
-      return (
-        <div>
-     
-        <div className="container">
-        <div className={"circle red on "} onClick={this.brillo}> </div>
-        <div className={"circle yellow on "} onClick={this.brillo}> </div>
-        <div className={"circle green on "} onClick={this.brillo}> </div>
-      </div>
-          </div>
-      )
-    }
+    
 
 }
 
 
 }
 
-export default Traffic;
+export default App;
 
